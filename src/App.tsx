@@ -1,20 +1,19 @@
+// App.tsx
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './Pages/HomePage';
 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-       <Header/>
-      
-        
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* Các route khác */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Styles/Carousel.css';
+
+
 interface CarouselProps {
   images: string[];
 }
@@ -26,6 +27,9 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
+  if (images.length === 0) {
+    return <div>No images available</div>;
+  }
 
   return (
     <div className="carousel">
