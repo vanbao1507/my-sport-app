@@ -1,5 +1,5 @@
 // Card.tsx
-import React from 'react';
+import React from "react";
 
 interface CardData {
   image: string;

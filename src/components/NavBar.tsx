@@ -1,5 +1,5 @@
 // NavBar.tsx
-import React from 'react';
+import React from "react";
 
 interface NavItem {
   label: string;
@@ -8,18 +8,18 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { label: 'Trang chủ', href: '#' },
-  { label: 'Giới thiệu', href: '#' },
+  { label: "Trang chủ", href: "#" },
+  { label: "Giới thiệu", href: "#" },
   {
-    label: 'Dịch vụ',
-    href: '#',
+    label: "Dịch vụ",
+    href: "#",
     dropdownItems: [
-      { label: 'Đặt sân', href: '#' },
-      { label: 'Giỏ hàng', href: '#' },
-      { label: 'Tình trạng sân', href: '#' },
+      { label: "Đặt sân", href: "./football-field" },
+      { label: "Giỏ hàng", href: "#" },
+      { label: "Tình trạng sân", href: "#" },
     ],
   },
-  { label: 'Liên hệ', href: '#' },
+  { label: "Liên hệ", href: "#" },
 ];
 
 const NavBar: React.FC = () => {
@@ -27,7 +27,10 @@ const NavBar: React.FC = () => {
     <nav>
       <ul>
         {navItems.map((item, index) => (
-          <li key={`nav-item-${index}`} className={item.dropdownItems ? 'dropdown' : ''}>
+          <li
+            key={`nav-item-${index}`}
+            className={item.dropdownItems ? "dropdown" : ""}
+          >
             <a href={item.href}>{item.label}</a>
             {item.dropdownItems && (
               <div className="dropdown-content">

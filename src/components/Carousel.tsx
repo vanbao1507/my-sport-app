@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect } from "react";
 
 interface CarouselProps {
   images: string[];
@@ -16,12 +15,14 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
+  // const goToSlide = (index: number) => {
+  //   setCurrentIndex(index);
+  // };
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
   };
 
   const goToNext = () => {
@@ -37,7 +38,9 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`carousel-item ${index === currentIndex ? 'active' : ''}`}
+            className={`carousel-item ${
+              index === currentIndex ? "active" : ""
+            }`}
             style={{ backgroundImage: `url(${image})` }}
           />
         ))}
@@ -48,7 +51,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
       <button className="carousel-control next" onClick={goToNext}>
         &#10095;
       </button>
-      <div className="carousel-indicators">
+      {/* <div className="carousel-indicators">
         {images.map((_, index) => (
           <button
             key={index}
@@ -56,8 +59,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             onClick={() => goToSlide(index)}
           />
         ))}
-      </div>
-      
+      </div> */}
     </div>
   );
 };
