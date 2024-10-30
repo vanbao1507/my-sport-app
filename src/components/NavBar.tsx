@@ -20,6 +20,7 @@ const navItems: NavItem[] = [
     ],
   },
   { label: "Liên hệ", href: "#" },
+  { label: "Đăng Nhập", href: "/login" },
 ];
 
 const NavBar: React.FC = () => {
