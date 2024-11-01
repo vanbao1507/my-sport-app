@@ -4,6 +4,7 @@ import Carousel from "./Carousel";
 import NavBar from "./NavBar";
 import Card from "./Card";
 import Cart from "./Cart";
+import Footer from "./Footer";
 
 const carouselImages = [
   "https://foba.vn/wp-content/uploads/2020/09/Hinh-anh-%E2%80%93-2020-San-Bong-Cu-Chi-Sau-01-Nam-Khai-Thac-1.jpg",
@@ -67,17 +68,19 @@ const StickyHeader: React.FC = () => {
         </div>
       </header>
       <Carousel images={carouselImages} />
-      <main>
-        <h2>Dịch vụ sân cỏ nhân tạo</h2>
-        <div className="card-container">
-          {cardData.map((card, index) => (
-            <Card key={index} card={card} />
-          ))}
-        </div>
-        <div>
-          <Cart />
-        </div>
-      </main>
+      <main></main>
+      <h2>Dịch vụ sân cỏ nhân tạo</h2>
+      <div className="card-container">
+        {cardData.map((card, index) => (
+          <Card key={index} card={card} />
+        ))}
+      </div>
+      <div>
+        <Cart />
+      </div>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

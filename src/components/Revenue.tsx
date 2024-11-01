@@ -9,10 +9,10 @@ const revenueData = {
 function Revenue() {
   return (
     <div className="revenue">
-      <h2>Revenue Overview</h2>
+      <p>Doanh Thu</p>
       <div className="stats">
         <div className="stat">
-          <h3>Total Revenue</h3>
+          <h4>Total Revenue</h4>
           <p>${revenueData.total}</p>
         </div>
         <div className="stat">
