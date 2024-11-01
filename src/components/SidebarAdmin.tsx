@@ -7,7 +7,7 @@ function Sidebar() {
       <nav className="sidebar-nav">
         <ul>
           <li>
-            <a href="#" className="active">
+            <a href="/login" className="active">
               Dashboard
             </a>
           </li>

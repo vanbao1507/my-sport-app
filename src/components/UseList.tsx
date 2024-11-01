@@ -38,8 +38,8 @@ const UserList: React.FC = () => {
 
   return (
     <div className="user-list-container custom-list-bar">
+      {/* <h2 className="user-list-title">Danh sách người dùng</h2> */}
       <Sidebar />
-      <h2 className="user-list-title">Danh sách người dùng</h2>
       <div className="user-lists">
         <div className="user-list admin-list">
           <h2>Admin/Quản lý</h2>
@@ -74,15 +74,15 @@ const UserList: React.FC = () => {
                 </li>
               ))}
           </ul>
+          <button
+            className="delete-button"
+            onClick={deleteSelectedUsers}
+            disabled={selectedUsers.length === 0}
+          >
+            Xóa người dùng đã chọn
+          </button>
         </div>
       </div>
-      <button
-        className="delete-button"
-        onClick={deleteSelectedUsers}
-        disabled={selectedUsers.length === 0}
-      >
-        Xóa người dùng đã chọn
-      </button>
     </div>
   );
 };

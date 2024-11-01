@@ -11,9 +11,9 @@ function AdminDashboard() {
       <main className="main-content">
         <h1>Admin Dashboard</h1>
         <div className="widgets">
-          <BookingList />
-          <Revenue />
+          {/* <BookingList /> */}
           <BarChart />
+          <Revenue />
         </div>
       </main>
     </div>
