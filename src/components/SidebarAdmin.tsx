@@ -1,6 +1,6 @@
 import React from "react";
 
-function Sidebar() {
+function SidebarAdmin() {
   return (
     <aside className="sidebar">
       <h2 className="logo">Mỹ Đình</h2>
@@ -26,4 +26,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default SidebarAdmin;

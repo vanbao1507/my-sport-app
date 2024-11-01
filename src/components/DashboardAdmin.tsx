@@ -1,14 +1,15 @@
 import React from "react";
-import Sidebar from "./SidebarAdmin";
+
 import BookingList from "./BookingList";
 import Revenue from "./Revenue";
 import BarChart from "./Barchart";
 import Footer from "./Footer";
+import SidebarAdmin from "./SidebarAdmin";
 
 function AdminDashboard() {
   return (
     <div className="admin-dashboard">
-      <Sidebar />
+      <SidebarAdmin />
       <main className="main-content">
         {/* <h1>Admin Dashboard</h1> */}
         <div className="widgets">
@@ -17,7 +18,6 @@ function AdminDashboard() {
           <Revenue />
         </div>
       </main>
-      <footer className="footer">{/* <Footer /> */}</footer>
     </div>
   );
 }

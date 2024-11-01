@@ -5,6 +5,7 @@ import HomePage from "../Pages/HomePage";
 import DatSanForm from "../Pages/FootballFieldPage";
 import AdminPage from "../Pages/AdminPage";
 import AdminUserList from "../Pages/AdminUserList";
+import LoginPage from "../Pages/LoginPage";
 
 const RouterMainApp = () => {
   return (
@@ -14,7 +15,7 @@ const RouterMainApp = () => {
         {/* Các route của ứng dụng */}
         <Route path="/" element={<HomePage />} />
         <Route path="/football-field" element={<DatSanForm />} />
-        <Route path="/login" element={<AdminPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/User" element={<AdminUserList />} />
       </Routes>
     </>
